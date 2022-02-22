@@ -4,6 +4,7 @@ fun main(args: Array<String>) {
     atividade3()
     atividade4()
     atividade5()
+    atividade6()
 }
 
 fun atividade1(): Unit {
@@ -76,4 +77,16 @@ fun atividade5(): Unit {
         4 -> println("A divisão é ${num1 / num2}")
         else -> println("Operação inválida!!")
     }
+}
+fun atividade6(): Unit {
+    println("Digite o total da venda:")
+    val totalDaVenda = readLine()!!.toFloat()
+    println("Escolha o tipo de cliente?:\n1 - Funcionário\n2 - VIP\n3 - Comum")
+    val tipoCliente = readLine()!!.toInt()
 
+    when (tipoCliente) {
+        1 -> println("total a pagar: ${totalDaVenda - totalDaVenda * 0.1}")
+        2 -> println("Total a pagar: ${totalDaVenda - totalDaVenda * 0.05}")
+        else -> println("Total a pagar: $totalDaVenda")
+    }
+}
