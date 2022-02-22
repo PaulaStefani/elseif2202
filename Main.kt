@@ -3,6 +3,7 @@ fun main(args: Array<String>) {
     atividade2()
     atividade3()
     atividade4()
+    atividade5()
 }
 
 fun atividade1(): Unit {
@@ -58,3 +59,21 @@ fun atividade4(): Unit {
     else
         println("Inválido! Tente novamente.")
 }
+
+        //Atividade do WHEN
+fun atividade5(): Unit {
+    println("Digite o primeiro número:")
+    val num1 = readLine()!!.toFloat()
+    println("Digite o segundo número:")
+    val num2 = readLine()!!.toFloat()
+    println("Escolha a operação:\n1 - Somar\n2 - Subtrair\n3 - Multiplicar\n4 - Dividir")
+    val operacao = readLine()!!.toInt()
+
+    when (operacao) {
+        1 -> println("A soma é ${num1 + num2}")
+        2 -> println("A subtração é ${num1 - num2}")
+        3 -> println("A multiplicação é ${num1 * num2}")
+        4 -> println("A divisão é ${num1 / num2}")
+        else -> println("Operação inválida!!")
+    }
+
